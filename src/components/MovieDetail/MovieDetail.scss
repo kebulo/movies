@@ -1,0 +1,51 @@
+.movie-detail-main-container {
+    margin: 5rem 1rem;
+
+    h1 {
+        color: var(--font-primary);
+        margin-bottom: 2rem;
+    }
+
+    .movie-detail-container {
+        align-items: center;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        gap: 15px;
+        margin-bottom: 1rem;
+
+        .movie-cover {
+            width: 100%;
+
+            img {
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .movie-info {
+            h3, h1, p {
+                color: var(--font-primary);
+            }
+        }
+    }
+
+    .movie-recommended-section {
+        h2 {
+            color: var(--font-primary);
+            padding: 1rem 0;
+        }
+    }
+
+    @media (min-width: 700px) {
+        margin: 5rem 10rem;
+
+        .movie-info {
+            flex: 1 0 0px
+        }
+
+        .movie-cover {
+            flex: 0 0 200px;
+        }
+    }
+}
