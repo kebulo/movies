@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css?family=Lora:400,700,400italic|Oswald:400,700");
+
+:root {
+	--color-brand: #42a4ff;
+	--primary-color: #090e13;
+	--secondary-color: #18212a;
+	--font-primary: #FFFFFF;
+	--font-secondary: #73b5f3;
+	--font-fam: 'Lato', sans-serif;
+	--rad: .7rem;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Oswald', sans-serif;
+
+
+	body {
+		background: var(--primary-color);
+
+		a {
+			text-decoration: none;
+		}
+
+		.container {
+			margin: 0 40px;
+		}
+	}
+}
