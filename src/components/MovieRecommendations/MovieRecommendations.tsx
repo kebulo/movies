@@ -1,7 +1,6 @@
 import React from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { MovieCard } from '../MovieCard/MovieCard';
-import { Navigation } from "swiper";
 import 'swiper/css';
 import './MovieRecommendations.scss';
 

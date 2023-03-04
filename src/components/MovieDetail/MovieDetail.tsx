@@ -50,24 +50,24 @@ const MovieDetail = () => {
                     <img src={cover} alt={movie.name} />
                 </aside>
                 <section className='movie-info'>
-                    <div>
+                    <div className='mb-1r'>
                         <h3>Genres</h3>
                         <p>
                             {(movie.genres) ? movie.genres.map((genre: string) => genre + ' ') : 'Not Available'}
                         </p>
                     </div>
 
-                    <div>
+                    <div className='mb-1r'>
                         <h3>Duration</h3>
-                        <p>{movie.length}</p>
+                        <p><i className='fas fa-clock'></i> {movie.length}</p>
                     </div>
 
-                    <div>
+                    <div className='mb-1r'>
                         <h3>Rate</h3>
-                        <p>{movie.rate}</p>
+                        <p><i className='fas fa-star'></i> {movie.rate}</p>
                     </div>
 
-                    <div>
+                    <div className='mb-1r'>
                         <h3>Overview</h3>
                         <p>
                             {movie.description}

@@ -1,6 +1,5 @@
-import React, { useEffect } from 'react'
+import { useEffect } from 'react'
 import { useDispatch } from 'react-redux';
-import movieApi from '../../common/apis/movieApi';
 import { fetchAsyncMovies } from '../../features/movies/movieSlice';
 import MovieListing from '../MovieListing/MovieListing';
 

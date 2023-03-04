@@ -1,5 +1,6 @@
 import axios from "axios";
+const url = window.location.href;
 
 export default axios.create({
-    baseURL: "http://localhost:3030/movies"
+    baseURL: url+"movies"
 });

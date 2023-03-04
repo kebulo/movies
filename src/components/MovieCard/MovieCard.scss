@@ -35,42 +35,48 @@ article.card {
     .infos {
         position: relative;
         padding: 14px 24px;
-        background: $white;
+        background: #282828;
         transition: $timing-1 $transition;
 
         .title {
             position: relative;
             margin: 10px 0;
-            letter-spacing: 3px;
-            color: $big-stone;
+            letter-spacing: 1px;
+            color: #fff;
             font-family: $grotesque-black;
             font-size: 1rem;
+            font-weight: 600;
             text-transform: uppercase;
             text-shadow: 0 0 0px lighten($big-stone, 20);
         }
 
-        .date,
-        .seats {
-            margin-bottom: 10px;
+        .movie-lenght,
+        .rating {
             text-transform: uppercase;
-            font-size: .85rem;
-            color: $lite-big-stone;
+            font-size: .65rem;
+            color: #FFF;
             font-family: $grotesque-regular;
         }
 
-        .seats {
+        .rating {
             display: inline-block;
             margin-bottom: 24px;
             padding-bottom: 24px;
-            border-bottom: 1px solid $lite-grey;
+            border-bottom: 1px solid #FFFFFF;
             opacity: 1;
             transition: $timing-2 $transition;
+
+            i {
+                color: #eada00;
+            }
         }
 
         .txt {
             overflow: hidden;
             text-overflow: ellipsis;
             display: -webkit-box;
+            color: #FFFFFF;
+            font-size: 0.85rem;
             -webkit-line-clamp: 3;
             line-clamp: 3;
             -webkit-box-orient: vertical;
@@ -78,7 +84,6 @@ article.card {
 
         .details {
             margin: 10px 0;
-            padding: 20px 24px;
             letter-spacing: 1px;
             color: $smalt-blue;
             font-family: $grotesque-black;
@@ -98,14 +103,14 @@ article.card {
             height: 100%;
         }
 
-        .seats, .details {
+        .rating, .details {
             opacity: 0;
         }
 
         &:hover .infos {
             transform: translateY(-$thumb-height);
     
-            .seats,
+            .rating,
             .txt,
             .details {
                 opacity: 1;

@@ -1,4 +1,3 @@
-import React, { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom';
 import './MovieCard.scss';
 
@@ -12,8 +11,8 @@ export const MovieCard = (props: any) => {
 			<img src={cover} className="thumb" alt={data.name} />
 			<div className="infos">
 				<h2 className="title">{data.name}</h2>
-				<h3 className="date">{data.length}</h3>
-				<h3 className="seats">Rating: {data.rate}</h3>
+				<h3 className="movie-lenght"><i className='fas fa-clock'></i> {data.length}</h3>
+				<h3 className="rating"><i className='fas fa-star'></i> {data.rate}</h3>
 				<p className="txt">{data.description}</p>
 				<h3 className="details">See more</h3>
 			</div>
