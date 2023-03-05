@@ -1,37 +1,22 @@
-import { useState } from 'react'
+import React from 'react';
 import { Link } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
-
-import { fetchAsyncMovies } from '../../features/movies/movieSlice';
 import "./Header.scss";
+import Filters from '../Filters/Filters';
 
-const Header = () => {
-	const [searchTerm, setSearchTerm] = useState("");
-	const dispatch = useDispatch();
+class Header extends React.Component {
+	
+	render() {
+		return (
+			<header className='header'>
+				<Link to="/">
+					<div className='logo'><i className='fas fa-film'></i>	Movie App</div>
+				</Link>
 
-	const submitHandler = (e: { preventDefault: () => void; }) => {
-		e.preventDefault();
-
-		dispatch(fetchAsyncMovies(searchTerm));
-
-		setSearchTerm("");
-	};
-
-	return (
-		<header className='header'>
-			<Link to="/">
-				<div className='logo'>Movie App</div>
-			</Link>
-
-			<div className="search-bar">
-				<form role="search" onSubmit={submitHandler}>
-					<label htmlFor="search">Search for stuff</label>
-					<input id="search" type="search" value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} placeholder="Search..." />
-					<button type="submit"><i className="fa fa-search"></i></button>
-				</form>
-			</div>
-		</header>
-	)
+				<Filters />
+			</header>
+		)
+	}
 }
+
 
 export default Header;

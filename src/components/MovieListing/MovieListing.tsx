@@ -1,6 +1,7 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 import { getAllMovies } from '../../features/movies/movieSlice'
+import Filters from '../Filters/Filters';
 import { MovieCard } from '../MovieCard/MovieCard';
 import './MovieListing.scss'
 
@@ -9,12 +10,6 @@ const MovieListing = () => {
 
     return (
         <>
-            <iframe 
-                src="https://www.youtube.com/embed/hebWYacbdvc" 
-                title="Main page cover"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                allowFullScreen></iframe>
-
             <div className='movie-wrapper'>
                 <div className='movie-list'>
                     <h2>Best movies at the best site</h2>

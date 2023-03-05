@@ -26,6 +26,8 @@ article.card {
     box-shadow: 0 1px 4px rgb(0 0 0 / 30%);
     overflow: hidden;
     cursor: pointer;
+    max-width: 250px;
+    margin: 0 auto;
 
     .thumb {
         border-radius: $border-radius;
@@ -85,7 +87,7 @@ article.card {
         .details {
             margin: 10px 0;
             letter-spacing: 1px;
-            color: $smalt-blue;
+            color: var(--font-secondary);
             font-family: $grotesque-black;
             font-size: .9rem;
             text-transform: uppercase;
@@ -98,7 +100,8 @@ article.card {
 
     @media screen and (min-width: 700px) {
         height: 350px;
-
+        max-width: 250px;
+        margin: 0 auto;
         .thumb {
             height: 100%;
         }
